@@ -1,5 +1,5 @@
 /* v16 — stable application controller. */
-window.BOBRUISK_APP_VERSION = "21";
+window.BOBRUISK_APP_VERSION = "22";
 // Set this once to the email address that should receive error reports.
 // FormSubmit sends the form directly from the static site; no backend is required.
 const REPORT_EMAIL = window.BOBRUISK_REPORT_EMAIL || "YOUR_EMAIL@example.com";
@@ -135,7 +135,9 @@ function normalizeData(data){
     coords:Array.isArray(o?.coords) && o.coords.length===2
       ? [Number(o.coords[0]),Number(o.coords[1])] : null,
     images:Array.isArray(o?.images)?o.images.filter(Boolean):[],
-    sources:Array.isArray(o?.sources)?o.sources:[],
+    sources:Array.isArray(o?.sources)
+      ? o.sources.filter(src => !/презентац/i.test(String(src?.title||src?.name||'')))
+      : [],
     details:o?.details && typeof o.details==='object'?o.details:{}
   }));
 }
