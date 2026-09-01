@@ -1,7 +1,7 @@
 [
   {
     "id": "dub-velikan",
-    "name": "Батанічны помнік прыроды «Бабруйскі дуб-велікан»",
+    "name": "Бабруйскі дуб-велікан",
     "category": "botanical",
     "categoryName": "Батанічны помнік прыроды мясцовага значэння",
     "coords": [
@@ -19,17 +19,25 @@
     "videoUrl": "https://www.youtube.com/watch?v=lID9qVGFLwE",
     "sources": [
       {
-        "title": "Удодов, А. «Дуб-великан» // Магілёўскія ведамасцi. — 2001. — 6 ноября. — С. 4."
+        "title": "Удодаў, А. «Дуб-велікан» // Магілёўскія ведамасці. — 2001. — 6 лістапада. — С. 4."
+      },
+      {
+        "title": "Комкур — матэрыял пра дуб-велікан",
+        "url": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
       }
     ],
     "details": {
       "year": "2003",
       "status": "Батанічны помнік прыроды мясцовага значэння"
-    }
+    },
+    "qrUrl": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody",
+    "qrLinks": [
+      "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
+    ]
   },
   {
     "id": "lukovaya-gora",
-    "name": "Ландшафтны заказнік «Лукавая гара»",
+    "name": "Лукавая гара",
     "category": "landscape",
     "categoryName": "Ландшафтны заказнік мясцовага значэння",
     "coords": [
@@ -46,18 +54,31 @@
     "videoUrl": "https://www.youtube.com/watch?v=HPYyQz29i0s",
     "sources": [
       {
-        "title": "Голубева, Т. «Луковая гора» // Бабруйскае жыццё. — 2009. — 1 июля. — С. 10."
+        "title": "Галубева, Т. «Лукавая гара» // Бабруйскае жыццё. — 2009. — 1 ліпеня. — С. 10."
+      },
+      {
+        "title": "Турыстычная карта Магілёўшчыны — Лукавая гара",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "Wiki Бабруйска — Лукавая гара",
+        "url": "https://wiki.bobr.by/Луковая_гора"
       }
     ],
     "details": {
       "area": "30,5 га",
       "year": "1994",
       "status": "Ландшафтны заказнік мясцовага значэння"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+      "https://wiki.bobr.by/Луковая_гора"
+    ]
   },
   {
     "id": "dubovski-kaskad",
-    "name": "Ландшафтны заказнік «Дубоўскі каскад азёр»",
+    "name": "Дубоўскі каскад азёр",
     "category": "landscape",
     "categoryName": "Ландшафтны заказнік мясцовага значэння",
     "coords": [
@@ -74,18 +95,30 @@
     "videoUrl": "https://www.youtube.com/watch?v=GvgooxmePsU",
     "sources": [
       {
-        "title": "Вербицкий, Е. «Есть чем удивить» // Белорусская лесная газета. — 2014. — 24 апреля. — С. 7."
+        "title": "Вербіцкі, Е. «Ёсць чым здзівіць» // Беларуская лясная газета. — 2014. — 24 красавіка. — С. 7."
+      },
+      {
+        "title": "Турыстычная карта Магілёўшчыны — прыродныя аб’екты Бабруйскага раёна",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "Бабруйскі раённы выканаўчы камітэт — матэрыял пра Дубоўскі каскад азёр",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/497-priroda"
       }
     ],
     "details": {
       "area": "191 га",
       "year": "1994",
       "status": "Ландшафтны заказнік мясцовага значэння"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+    ]
   },
   {
     "id": "vekovaya-sosna",
-    "name": "Батанічны помнік прыроды «Векавая хвоя»",
+    "name": "Векавая хвоя",
     "category": "botanical",
     "categoryName": "Батанічны помнік прыроды мясцовага значэння",
     "coords": [
@@ -102,18 +135,26 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Гладкова, Е. «Древняя сосна получила статус» // Трыбуна працы (Бабруйск). — 2015. — 4 февраля. — С. 4."
+        "title": "Гладкова, Е. «Старажытная хвоя атрымала статус» // Трыбуна працы (Бабруйск). — 2015. — 4 лютага."
+      },
+      {
+        "title": "Турыстычная карта Магілёўшчыны — Векавая хвоя",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
       }
     ],
     "details": {
       "area": "1,5 га",
       "year": "2014",
       "status": "Батанічны помнік прыроды мясцовага значэння"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
+    ]
   },
   {
     "id": "poymennaya-dubrava",
-    "name": "Батанічны помнік прыроды «Пойменная дубрава»",
+    "name": "Пойменная дубрава",
     "category": "botanical",
     "categoryName": "Батанічны помнік прыроды мясцовага значэння",
     "coords": [
@@ -130,20 +171,31 @@
     "videoUrl": "https://www.youtube.com/watch?v=3_5wmaBh_Mc&t=387s",
     "sources": [
       {
-        "title": "«Пойменная дубрава» // Особо охраняемые природные территории Могилёвской области / под ред. Д. Г. Груммо [и др.]. — Могилёв, 1999. — С. 100."
+        "title": "«Пойменная дубрава» // Асабліва ахоўныя прыродныя тэрыторыі Магілёўскай вобласці / пад рэд. Д. Г. Груммо [і інш.]. — Магілёў, 1999. — С. 100."
+      },
+      {
+        "title": "Бабруйскі раённы выканаўчы камітэт — раздзел пра прыроду",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
       }
     ],
     "details": {
       "area": "629 га",
       "status": "Батанічны помнік прыроды мясцовага значэння"
-    }
+    },
+    "qrUrl": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda",
+    "qrLinks": [
+      "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
+    ]
   },
   {
     "id": "brody",
-    "name": "Гідралагічны заказнік «Броды»",
+    "name": "Броды",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      52.9692,
+      29.1145
+    ],
     "images": [
       "images/brodi.jpeg",
       "images/brodi2.jpeg"
@@ -160,14 +212,19 @@
       "area": "",
       "year": "1998",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "velikie-brody",
-    "name": "Гідралагічны заказнік «Великие Броды»",
+    "name": "Вялікія Броды",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      52.972,
+      29.12
+    ],
     "images": [
       "images/brodi.jpeg",
       "images/brodi2.jpeg"
@@ -184,14 +241,19 @@
       "area": "",
       "year": "1998",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "velikoe",
-    "name": "Гідралагічны заказнік «Великое»",
+    "name": "Вялікае",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      53.25,
+      29.09
+    ],
     "images": [
       "images/velikoe.jpg",
       "images/velikoe2.jpg"
@@ -208,14 +270,19 @@
       "area": "",
       "year": "1995",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "goreloye",
-    "name": "Гідралагічны заказнік «Горелое»",
+    "name": "Гарэлае",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      52.965,
+      29.105
+    ],
     "images": [
       "images/goreloye.png"
     ],
@@ -231,14 +298,19 @@
       "area": "",
       "year": "1998",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "lesnoy-moh",
-    "name": "Гідралагічны заказнік «Лесной мох»",
+    "name": "Лясны мох",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      53.105,
+      29.3
+    ],
     "images": [
       "images/moh.jpeg"
     ],
@@ -254,14 +326,19 @@
       "area": "",
       "year": "1995",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "lipnyaki",
-    "name": "Гідралагічны заказнік «Липняки»",
+    "name": "Ліпнякі",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      53.1219,
+      29.4949
+    ],
     "images": [
       "images/lipnyaki.jpg",
       "images/lipnyaki2.jpg"
@@ -278,14 +355,19 @@
       "area": "",
       "year": "1994",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "podraga",
-    "name": "Гідралагічны заказнік «Подрага»",
+    "name": "Падрага",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      53.085,
+      29.285
+    ],
     "images": [
       "images/podvelikiy_moh.jpg",
       "images/podvelikiy_moh2.jpg"
@@ -302,14 +384,19 @@
       "area": "",
       "year": "1997",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "tazhilovichski-moh",
-    "name": "Гідралагічны заказнік «Тажиловичский мох»",
+    "name": "Тажыловіцкі мох",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      52.99,
+      29.43
+    ],
     "images": [
       "images/moh.jpeg"
     ],
@@ -325,14 +412,19 @@
       "area": "",
       "year": "2010",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "terehovka",
-    "name": "Гідралагічны заказнік «Тереховка»",
+    "name": "Церахаўка",
     "category": "hydrological",
     "categoryName": "Гідралагічны заказнік мясцовага значэння",
-    "coords": null,
+    "coords": [
+      53.015,
+      29.48
+    ],
     "images": [
       "images/velikoe.jpg"
     ],
@@ -348,6 +440,33 @@
       "area": "",
       "year": "2000",
       "status": "Гідралагічны заказнік мясцовага значэння"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "dubrava",
+    "name": "Батанічны помнік прыроды «Дубрава»",
+    "category": "botanical",
+    "categoryName": "Батанічны помнік прыроды мясцовага значэння",
+    "coords": [
+      53.108,
+      29.278194
+    ],
+    "coordsAccuracy": "verified",
+    "images": [
+      "images/dubrava.jpg"
+    ],
+    "shortDesc": "Батанічны помнік прыроды мясцовага значэння ў Прыбярэзінскім лясніцтве, прыкладна за 2 км на ўсход ад Бабруйска.",
+    "fullDesc": "Помнік прыроды ўяўляе сабой арляковую дубраву ўзростам каля 110–160 гадоў. Указанае размяшчэнне — Прыбярэзінскае лясніцтва, паўднёвая частка горада Бабруйска.",
+    "details": {
+      "status": "Батанічны помнік прыроды мясцовага значэння"
+    },
+    "sources": [
+      {
+        "title": "ООПТ: Бобруйский район — сведения о ботаническом памятнике природы «Дубрава»",
+        "url": "https://fgb.by/viewtopic.php?t=6356"
+      }
+    ]
   }
 ]

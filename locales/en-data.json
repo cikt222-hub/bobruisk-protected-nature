@@ -1,7 +1,7 @@
 [
   {
     "id": "dub-velikan",
-    "name": "Botanical Natural Monument “Bobruisk Giant Oak”",
+    "name": "Bobruisk Giant Oak",
     "category": "botanical",
     "categoryName": "Botanical Natural Monument of local significance",
     "coords": [
@@ -19,17 +19,25 @@
     "videoUrl": "https://www.youtube.com/watch?v=lID9qVGFLwE",
     "sources": [
       {
-        "title": "Удодов, А. «Дуб-великан» // Магілёўскія ведамасцi. — 2001. — 6 ноября. — С. 4."
+        "title": "Udodov, A. “Giant Oak” // Mogilevskie Vedomosti. — 2001. — 6 November. — p. 4."
+      },
+      {
+        "title": "Komkur — article about the Giant Oak",
+        "url": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
       }
     ],
     "details": {
       "year": "2003",
       "status": "Botanical Natural Monument of local significance"
-    }
+    },
+    "qrUrl": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody",
+    "qrLinks": [
+      "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
+    ]
   },
   {
     "id": "lukovaya-gora",
-    "name": "Landscape Reserve “Lukovaya Gora”",
+    "name": "Lukovaya Gora",
     "category": "landscape",
     "categoryName": "Landscape Reserve of local significance",
     "coords": [
@@ -46,18 +54,31 @@
     "videoUrl": "https://www.youtube.com/watch?v=HPYyQz29i0s",
     "sources": [
       {
-        "title": "Голубева, Т. «Луковая гора» // Бабруйскае жыццё. — 2009. — 1 июля. — С. 10."
+        "title": "Golubeva, T. “Lukovaya Gora” // Babrujskaje zhyccjo. — 2009. — 1 July. — p. 10."
+      },
+      {
+        "title": "Tourist Map of Mogilev Region — Lukovaya Gora",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "Bobruisk Wiki — Lukovaya Gora",
+        "url": "https://wiki.bobr.by/Луковая_гора"
       }
     ],
     "details": {
       "area": "30,5 га",
       "year": "1994",
       "status": "Landscape Reserve of local significance"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+      "https://wiki.bobr.by/Луковая_гора"
+    ]
   },
   {
     "id": "dubovski-kaskad",
-    "name": "Landscape Reserve “Dubovski Cascade of Lakes”",
+    "name": "Dubovski Cascade of Lakes",
     "category": "landscape",
     "categoryName": "Landscape Reserve of local significance",
     "coords": [
@@ -74,18 +95,30 @@
     "videoUrl": "https://www.youtube.com/watch?v=GvgooxmePsU",
     "sources": [
       {
-        "title": "Вербицкий, Е. «Есть чем удивить» // Белорусская лесная газета. — 2014. — 24 апреля. — С. 7."
+        "title": "Verbítsky, E. “There is something to amaze” // Belarusian Forest Newspaper. — 2014. — 24 April. — p. 7."
+      },
+      {
+        "title": "Tourist Map of Mogilev Region — natural sites of Bobruisk District",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "Bobruisk District Executive Committee — Dubovski Cascade of Lakes",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/497-priroda"
       }
     ],
     "details": {
       "area": "191 га",
       "year": "1994",
       "status": "Landscape Reserve of local significance"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+    ]
   },
   {
     "id": "vekovaya-sosna",
-    "name": "Botanical Natural Monument “Century Pine”",
+    "name": "Century Pine",
     "category": "botanical",
     "categoryName": "Botanical Natural Monument of local significance",
     "coords": [
@@ -102,18 +135,26 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Гладкова, Е. «Древняя сосна получила статус» // Трыбуна працы (Бабруйск). — 2015. — 4 февраля. — С. 4."
+        "title": "Gladkova, E. “The ancient pine received protected status” // Trybuna Pratsy (Bobruisk). — 2015. — 4 February."
+      },
+      {
+        "title": "Tourist Map of Mogilev Region — Century Pine",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
       }
     ],
     "details": {
       "area": "1,5 га",
       "year": "2014",
       "status": "Botanical Natural Monument of local significance"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
+    ]
   },
   {
     "id": "poymennaya-dubrava",
-    "name": "Botanical Natural Monument “Floodplain Oak Forest”",
+    "name": "Floodplain Oak Forest",
     "category": "botanical",
     "categoryName": "Botanical Natural Monument of local significance",
     "coords": [
@@ -130,20 +171,31 @@
     "videoUrl": "https://www.youtube.com/watch?v=3_5wmaBh_Mc&t=387s",
     "sources": [
       {
-        "title": "«Пойменная дубрава» // Особо охраняемые природные территории Могилёвской области / под ред. Д. Г. Груммо [и др.]. — Могилёв, 1999. — С. 100."
+        "title": "“Floodplain Oak Forest” // Specially Protected Natural Areas of Mogilev Region / ed. by D. G. Grummo et al. — Mogilev, 1999. — p. 100."
+      },
+      {
+        "title": "Bobruisk District Executive Committee — nature section",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
       }
     ],
     "details": {
       "area": "629 га",
       "status": "Botanical Natural Monument of local significance"
-    }
+    },
+    "qrUrl": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda",
+    "qrLinks": [
+      "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
+    ]
   },
   {
     "id": "brody",
-    "name": "Hydrological Reserve «Броды»",
+    "name": "Brody",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      52.9692,
+      29.1145
+    ],
     "images": [
       "images/brodi.jpeg",
       "images/brodi2.jpeg"
@@ -160,14 +212,19 @@
       "area": "",
       "year": "1998",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "velikie-brody",
-    "name": "Hydrological Reserve «Великие Броды»",
+    "name": "Velikiye Brody",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      52.972,
+      29.12
+    ],
     "images": [
       "images/brodi.jpeg",
       "images/brodi2.jpeg"
@@ -184,14 +241,19 @@
       "area": "",
       "year": "1998",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "velikoe",
-    "name": "Hydrological Reserve «Великое»",
+    "name": "Velikoye",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      53.25,
+      29.09
+    ],
     "images": [
       "images/velikoe.jpg",
       "images/velikoe2.jpg"
@@ -208,14 +270,19 @@
       "area": "",
       "year": "1995",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "goreloye",
-    "name": "Hydrological Reserve «Горелое»",
+    "name": "Goreloye",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      52.965,
+      29.105
+    ],
     "images": [
       "images/goreloye.png"
     ],
@@ -231,14 +298,19 @@
       "area": "",
       "year": "1998",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "lesnoy-moh",
-    "name": "Hydrological Reserve «Лесной мох»",
+    "name": "Lesnoy Mokh",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      53.105,
+      29.3
+    ],
     "images": [
       "images/moh.jpeg"
     ],
@@ -254,14 +326,19 @@
       "area": "",
       "year": "1995",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "lipnyaki",
-    "name": "Hydrological Reserve «Липняки»",
+    "name": "Lipnyaki",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      53.1219,
+      29.4949
+    ],
     "images": [
       "images/lipnyaki.jpg",
       "images/lipnyaki2.jpg"
@@ -278,14 +355,19 @@
       "area": "",
       "year": "1994",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "podraga",
-    "name": "Hydrological Reserve «Подрага»",
+    "name": "Podraga",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      53.085,
+      29.285
+    ],
     "images": [
       "images/podvelikiy_moh.jpg",
       "images/podvelikiy_moh2.jpg"
@@ -302,14 +384,19 @@
       "area": "",
       "year": "1997",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "tazhilovichski-moh",
-    "name": "Hydrological Reserve «Тажиловичский мох»",
+    "name": "Tazhilovichski Mokh",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      52.99,
+      29.43
+    ],
     "images": [
       "images/moh.jpeg"
     ],
@@ -325,14 +412,19 @@
       "area": "",
       "year": "2010",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "terehovka",
-    "name": "Hydrological Reserve «Тереховка»",
+    "name": "Terekhovka",
     "category": "hydrological",
     "categoryName": "Hydrological Reserve of local significance",
-    "coords": null,
+    "coords": [
+      53.015,
+      29.48
+    ],
     "images": [
       "images/velikoe.jpg"
     ],
@@ -348,6 +440,33 @@
       "area": "",
       "year": "2000",
       "status": "Hydrological Reserve of local significance"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "dubrava",
+    "name": "Botanical Natural Monument “Dubrava”",
+    "category": "botanical",
+    "categoryName": "Botanical natural monument of local significance",
+    "coords": [
+      53.108,
+      29.278194
+    ],
+    "coordsAccuracy": "verified",
+    "images": [
+      "images/dubrava.jpg"
+    ],
+    "shortDesc": "A botanical natural monument of local significance in the Priberezinsky forestry area, about 2 km east of Bobruisk.",
+    "fullDesc": "The protected site is a bracken oak forest estimated to be about 110–160 years old. The indicated location is the Priberezinsky forestry area in the southern part of Bobruisk.",
+    "details": {
+      "status": "Botanical natural monument of local significance"
+    },
+    "sources": [
+      {
+        "title": "ООПТ: Бобруйский район — сведения о ботаническом памятнике природы «Дубрава»",
+        "url": "https://fgb.by/viewtopic.php?t=6356"
+      }
+    ]
   }
 ]

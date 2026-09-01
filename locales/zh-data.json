@@ -1,7 +1,7 @@
 [
   {
     "id": "dub-velikan",
-    "name": "植物自然纪念碑“博布鲁伊斯克巨橡”",
+    "name": "Bobruisk Giant Oak",
     "category": "botanical",
     "categoryName": "地方级植物自然纪念碑",
     "coords": [
@@ -19,17 +19,25 @@
     "videoUrl": "https://www.youtube.com/watch?v=lID9qVGFLwE",
     "sources": [
       {
-        "title": "Удодов, А. «Дуб-великан» // Магілёўскія ведамасцi. — 2001. — 6 ноября. — С. 4."
+        "title": "A. Udodov，《巨橡》//《莫吉廖夫公报》，2001年11月6日。第4页。"
+      },
+      {
+        "title": "Komkur — 关于巨橡的文章",
+        "url": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
       }
     ],
     "details": {
       "year": "2003",
       "status": "地方级植物自然纪念碑"
-    }
+    },
+    "qrUrl": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody",
+    "qrLinks": [
+      "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
+    ]
   },
   {
     "id": "lukovaya-gora",
-    "name": "景观保护区“卢科瓦亚山”",
+    "name": "Lukovaya Gora",
     "category": "landscape",
     "categoryName": "地方级景观保护区",
     "coords": [
@@ -46,18 +54,31 @@
     "videoUrl": "https://www.youtube.com/watch?v=HPYyQz29i0s",
     "sources": [
       {
-        "title": "Голубева, Т. «Луковая гора» // Бабруйскае жыццё. — 2009. — 1 июля. — С. 10."
+        "title": "T. Golubeva，《卢科瓦亚山》//《博布鲁伊斯克生活》，2009年7月1日。第10页。"
+      },
+      {
+        "title": "莫吉廖夫州旅游地图 — 卢科瓦亚山",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "博布鲁伊斯克 Wiki — 卢科瓦亚山",
+        "url": "https://wiki.bobr.by/Луковая_гора"
       }
     ],
     "details": {
       "area": "30,5 га",
       "year": "1994",
       "status": "地方级景观保护区"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+      "https://wiki.bobr.by/Луковая_гора"
+    ]
   },
   {
     "id": "dubovski-kaskad",
-    "name": "景观保护区“杜博夫湖泊链”",
+    "name": "Dubovski Cascade of Lakes",
     "category": "landscape",
     "categoryName": "地方级景观保护区",
     "coords": [
@@ -74,18 +95,30 @@
     "videoUrl": "https://www.youtube.com/watch?v=GvgooxmePsU",
     "sources": [
       {
-        "title": "Вербицкий, Е. «Есть чем удивить» // Белорусская лесная газета. — 2014. — 24 апреля. — С. 7."
+        "title": "E. Verbitsky，《有值得惊叹之处》//《白俄罗斯林业报》，2014年4月24日。第7页。"
+      },
+      {
+        "title": "莫吉廖夫州旅游地图 — 博布鲁伊斯克区自然景点",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "博布鲁伊斯克区执行委员会 — 杜博夫湖泊链",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/497-priroda"
       }
     ],
     "details": {
       "area": "191 га",
       "year": "1994",
       "status": "地方级景观保护区"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+    ]
   },
   {
     "id": "vekovaya-sosna",
-    "name": "植物自然纪念碑“世纪松”",
+    "name": "Century Pine",
     "category": "botanical",
     "categoryName": "地方级植物自然纪念碑",
     "coords": [
@@ -102,18 +135,26 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Гладкова, Е. «Древняя сосна получила статус» // Трыбуна працы (Бабруйск). — 2015. — 4 февраля. — С. 4."
+        "title": "E. Gladkova，《古老的松树获得保护地位》//《劳动论坛报》（博布鲁伊斯克），2015年2月4日。"
+      },
+      {
+        "title": "莫吉廖夫州旅游地图 — 世纪松",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
       }
     ],
     "details": {
       "area": "1,5 га",
       "year": "2014",
       "status": "地方级植物自然纪念碑"
-    }
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
+    ]
   },
   {
     "id": "poymennaya-dubrava",
-    "name": "植物自然纪念碑“河漫滩橡树林”",
+    "name": "Floodplain Oak Forest",
     "category": "botanical",
     "categoryName": "地方级植物自然纪念碑",
     "coords": [
@@ -130,20 +171,31 @@
     "videoUrl": "https://www.youtube.com/watch?v=3_5wmaBh_Mc&t=387s",
     "sources": [
       {
-        "title": "«Пойменная дубрава» // Особо охраняемые природные территории Могилёвской области / под ред. Д. Г. Груммо [и др.]. — Могилёв, 1999. — С. 100."
+        "title": "《河漫滩橡树林》//《莫吉廖夫州特别保护自然区域》，D. G. Grummo 等编。— 莫吉廖夫，1999。第100页。"
+      },
+      {
+        "title": "博布鲁伊斯克区执行委员会 — 自然专题",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
       }
     ],
     "details": {
       "area": "629 га",
       "status": "地方级植物自然纪念碑"
-    }
+    },
+    "qrUrl": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda",
+    "qrLinks": [
+      "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
+    ]
   },
   {
     "id": "brody",
-    "name": "水文保护区 «Броды»",
+    "name": "Brody",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      52.9692,
+      29.1145
+    ],
     "images": [
       "images/brodi.jpeg",
       "images/brodi2.jpeg"
@@ -160,14 +212,19 @@
       "area": "",
       "year": "1998",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "velikie-brody",
-    "name": "水文保护区 «Великие Броды»",
+    "name": "Velikiye Brody",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      52.972,
+      29.12
+    ],
     "images": [
       "images/brodi.jpeg",
       "images/brodi2.jpeg"
@@ -184,14 +241,19 @@
       "area": "",
       "year": "1998",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "velikoe",
-    "name": "水文保护区 «Великое»",
+    "name": "Velikoye",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      53.25,
+      29.09
+    ],
     "images": [
       "images/velikoe.jpg",
       "images/velikoe2.jpg"
@@ -208,14 +270,19 @@
       "area": "",
       "year": "1995",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "goreloye",
-    "name": "水文保护区 «Горелое»",
+    "name": "Goreloye",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      52.965,
+      29.105
+    ],
     "images": [
       "images/goreloye.png"
     ],
@@ -231,14 +298,19 @@
       "area": "",
       "year": "1998",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "lesnoy-moh",
-    "name": "水文保护区 «Лесной мох»",
+    "name": "Lesnoy Mokh",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      53.105,
+      29.3
+    ],
     "images": [
       "images/moh.jpeg"
     ],
@@ -254,14 +326,19 @@
       "area": "",
       "year": "1995",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "lipnyaki",
-    "name": "水文保护区 «Липняки»",
+    "name": "Lipnyaki",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      53.1219,
+      29.4949
+    ],
     "images": [
       "images/lipnyaki.jpg",
       "images/lipnyaki2.jpg"
@@ -278,14 +355,19 @@
       "area": "",
       "year": "1994",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "podraga",
-    "name": "水文保护区 «Подрага»",
+    "name": "Podraga",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      53.085,
+      29.285
+    ],
     "images": [
       "images/podvelikiy_moh.jpg",
       "images/podvelikiy_moh2.jpg"
@@ -302,14 +384,19 @@
       "area": "",
       "year": "1997",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "tazhilovichski-moh",
-    "name": "水文保护区 «Тажиловичский мох»",
+    "name": "Tazhilovichski Mokh",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      52.99,
+      29.43
+    ],
     "images": [
       "images/moh.jpeg"
     ],
@@ -325,14 +412,19 @@
       "area": "",
       "year": "2010",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
   },
   {
     "id": "terehovka",
-    "name": "水文保护区 «Тереховка»",
+    "name": "Terekhovka",
     "category": "hydrological",
     "categoryName": "地方级水文保护区",
-    "coords": null,
+    "coords": [
+      53.015,
+      29.48
+    ],
     "images": [
       "images/velikoe.jpg"
     ],
@@ -348,6 +440,33 @@
       "area": "",
       "year": "2000",
       "status": "地方级水文保护区"
-    }
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "dubrava",
+    "name": "植物自然纪念物“Dubrava”",
+    "category": "botanical",
+    "categoryName": "地方级植物自然纪念物",
+    "coords": [
+      53.108,
+      29.278194
+    ],
+    "coordsAccuracy": "verified",
+    "images": [
+      "images/dubrava.jpg"
+    ],
+    "shortDesc": "位于普里别列津斯基林区、距博布鲁伊斯克以东约2公里的地方级植物自然纪念物。",
+    "fullDesc": "该保护地为一片约110—160年树龄的蕨类橡树林。所示位置为博布鲁伊斯克南部的普里别列津斯基林区。",
+    "details": {
+      "status": "地方级植物自然纪念物"
+    },
+    "sources": [
+      {
+        "title": "ООПТ: Бобруйский район — сведения о ботаническом памятнике природы «Дубрава»",
+        "url": "https://fgb.by/viewtopic.php?t=6356"
+      }
+    ]
   }
 ]
