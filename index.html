@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="style.css?v=19">
+  <link rel="stylesheet" href="style.css?v=26">
 </head>
 <body>
   <div class="site-shell">
@@ -155,11 +155,11 @@
               <button class="gallery-arrow prev" aria-label="Предыдущее фото"><img class="ui-icon" src="icons/chevron-left.svg" alt=""></button>
               <img id="detail-image" src="" alt="Фото объекта">
               <button class="gallery-arrow next" aria-label="Следующее фото"><img class="ui-icon" src="icons/chevron-right.svg" alt=""></button>
-              <div id="gallery-counter" class="gallery-counter">1 / 1</div>
+              <div id="gallery-counter" class="gallery-counter">1 / 1</div><span id="detail-stock-photo" class="stock-photo-badge hidden">Стоковое фото</span>
             </div>
             <h2 id="detail-title" class="object-title"></h2>
             <p id="detail-short-desc" class="short-description"></p>
-            <div id="detail-extra" class="detail-extra" style="display:none"></div>
+            <div id="detail-extra" class="detail-extra" style="display:none"></div><div id="detail-manager" class="detail-manager hidden"><b id="detail-manager-label">Управляющая структура</b><span id="detail-manager-value"></span></div>
             <button id="expand-sidebar-btn" class="expand-more-btn"><span id="expand-sidebar-label">Подробнее</span><img class="ui-icon" src="icons/arrow-right.svg" alt=""></button>
           </div>
         </aside>
@@ -211,7 +211,7 @@
             <button class="object-detail-gallery-arrow prev" id="object-detail-gallery-prev" type="button" aria-label="Предыдущее фото"><img class="ui-icon" src="icons/chevron-left.svg" alt=""></button>
             <img id="object-detail-image" src="" alt="Фото объекта">
             <button class="object-detail-gallery-arrow next" id="object-detail-gallery-next" type="button" aria-label="Следующее фото"><img class="ui-icon" src="icons/chevron-right.svg" alt=""></button>
-            <div id="object-detail-counter" class="modal-gallery-counter">1 / 1</div>
+            <div id="object-detail-counter" class="modal-gallery-counter">1 / 1</div><span id="object-detail-stock-photo" class="stock-photo-badge hidden">Стоковое фото</span>
           </div>
         </section>
         <section class="detail-media-card">
@@ -223,27 +223,21 @@
           <a id="object-detail-youtube-link" class="youtube-open-link hidden" href="#" target="_blank" rel="noopener"><span id="youtube-open-text">Открыть видео на YouTube</span><img class="ui-icon" src="icons/external.svg" alt=""></a>
         </section>
       </div>
-      <div id="object-detail-facts" class="object-detail-facts"></div>
+      <div id="object-detail-facts" class="object-detail-facts"></div><div id="object-detail-manager" class="detail-manager detail-manager-page hidden"><b id="object-detail-manager-label">Управляющая структура</b><span id="object-detail-manager-value"></span></div>
       <section class="object-detail-copy">
         <div class="content-kicker" id="object-detail-description-title">Подробное описание</div>
         <div id="object-detail-full-desc" class="full-text"></div>
       </section>
       <section class="object-detail-sources-grid">
-        <div class="object-detail-sources">
+        <div class="object-detail-sources object-detail-sources-wide">
           <div class="content-kicker" id="object-detail-sources-title">Источники</div>
           <ul id="object-detail-sources"></ul>
-        </div>
-        <div id="object-detail-qr-col" class="object-detail-qr hidden">
-          <div class="content-kicker" id="object-detail-qr-label">Ссылка для QR-кода</div>
-          <div class="qr-code-container"><img id="object-detail-qr-code" src="" alt="QR-код"><button id="object-detail-qr-expand" class="qr-expand-btn" type="button" title="Увеличить QR-код"><img class="ui-icon" src="icons/zoom.svg" alt=""></button></div>
-          <a id="object-detail-source-link" class="qr-source-link" href="#" target="_blank" rel="noopener"></a>
         </div>
       </section>
     </div>
   </section>
 
   <div id="image-viewer" class="image-viewer-backdrop hidden"><button id="close-image-viewer" class="image-viewer-close" type="button"><img class="ui-icon" src="icons/close.svg" alt=""></button><img id="image-viewer-img" src="" alt="Увеличенное изображение"></div>
-  <div id="qr-viewer" class="qr-viewer-backdrop hidden"><button id="close-qr-viewer" class="qr-viewer-close" type="button"><img class="ui-icon" src="icons/close.svg" alt=""></button><div class="qr-viewer-content"><img id="qr-viewer-img" src="" alt="QR-код"><div class="qr-viewer-links"><div class="content-kicker" id="qr-viewer-label">Ссылка для QR-кода</div><ul id="qr-viewer-sources"></ul></div></div></div>
 
   <!-- Отчёт об ошибке: отправляется на почту владельца через FormSubmit. -->
   <div id="report-error-modal" class="report-modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="report-error-title">
@@ -268,6 +262,28 @@
           <button id="report-error-submit" class="primary-cta" type="submit"><span id="report-error-submit-label">Отправить отчёт</span><span aria-hidden="true">→</span></button>
         </div>
       </form>
+    </div>
+  </div>
+
+
+  <div id="source-modal" class="source-modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="source-modal-title">
+    <div class="source-modal-card">
+      <button id="source-modal-close" class="round-close source-modal-close" type="button" aria-label="Закрыть"><img class="ui-icon" src="icons/close.svg" alt=""></button>
+      <div class="content-kicker" id="source-modal-kicker">ИСТОЧНИК</div>
+      <h2 id="source-modal-title">Источник информации</h2>
+      <p id="source-modal-copy" class="source-modal-copy"></p>
+      <div class="source-modal-grid">
+        <div class="source-modal-info">
+          <div id="source-modal-name" class="source-modal-name"></div>
+          <div id="source-modal-url" class="source-modal-url"></div>
+          <a id="source-modal-open" class="primary-cta" href="#" target="_blank" rel="noopener noreferrer">Перейти на сайт <span>→</span></a>
+          <div id="source-modal-no-url" class="source-modal-no-url hidden"></div>
+        </div>
+        <div id="source-modal-qr-wrap" class="source-modal-qr-wrap">
+          <img id="source-modal-qr" src="" alt="QR-код источника">
+          <span>QR</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -306,9 +322,9 @@
         <div class="about-author-layout">
           <div class="author-avatar about-author-avatar"><img src="images/ico.jpeg" alt="Аватар автора" class="avatar-img"></div>
           <div class="about-author-main">
-            <div class="about-author-top"><div id="about-author-name" class="author-name">Кирилл Шаповалов</div><span id="about-author-age" class="author-age">16 лет</span></div>
             <div id="about-author-nick" class="author-nick">Indigo</div>
-            <p id="about-author-description" class="author-description">Автор проекта и разработчик цифрового атласа.</p>
+            <div class="about-author-top"><div id="about-author-name" class="author-name">Кирилл Шаповалов</div><span id="about-author-age" class="author-age">16 лет</span></div>
+            <p id="about-author-description" class="author-description">Автор проекта и разработчик цифрового атласа.</p><div class="author-meta-grid"><div><span class="author-meta-label" id="about-author-role-label"></span><strong id="about-author-role"></strong></div><div><span class="author-meta-label" id="about-author-supervisor-label"></span><strong id="about-author-supervisor"></strong></div></div>
           </div>
         </div>
       </section>
@@ -333,9 +349,9 @@
   </section>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" onerror="window.LEAFLET_LOAD_FAILED=true"></script>
-  <script src="embedded-data.js?v=21"></script>
-  <script src="embedded-locales.js?v=21"></script>
-  <script src="report-config.js?v=21"></script>
-  <script src="script.js?v=21"></script>
+  <script src="embedded-data.js?v=24"></script>
+  <script src="embedded-locales.js?v=24"></script>
+  <script src="report-config.js?v=24"></script>
+  <script src="script.js?v=24"></script>
 </body>
 </html>

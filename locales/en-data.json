@@ -19,21 +19,32 @@
     "videoUrl": "https://www.youtube.com/watch?v=lID9qVGFLwE",
     "sources": [
       {
-        "title": "Udodov, A. “Giant Oak” // Mogilevskie Vedomosti. — 2001. — 6 November. — p. 4."
+        "title": "Официальный паспорт памятника природы «Бобруйский дуб-великан» в Реестре Министерства природных ресурсов и охраны окружающей среды РБ (minpriroda.gov.by).",
+        "url": "https://minpriroda.gov.by"
       },
       {
-        "title": "Komkur — article about the Giant Oak",
-        "url": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
+        "title": "Аналитическая статья «Почему Дуб-великан в Бобруйске собираются лишить статуса памятника природы» — Городское издание «Коммерческий курьер» (komkur.info).",
+        "url": "https://komkur.info"
+      },
+      {
+        "title": "Экспертное заключение ученых «Бобруйский дуб-великан можно спасти» — Новостной портал «Наша Ніва» (nashaniva.com).",
+        "url": "https://nashaniva.com"
+      },
+      {
+        "title": "Экологический репортаж «В Бобруйске хотят лишить статуса памятника природы дуба» — Информационный ресурс Zerkalo.io.",
+        "url": "https://zerkalo.io"
+      },
+      {
+        "title": "Картографическая карточка объекта — Интерактивная база данных Яндекс Карта (Бобруйск, ул. Гоголя)."
       }
     ],
     "details": {
-      "year": "2003",
-      "status": "Botanical Natural Monument of local significance"
-    },
-    "qrUrl": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody",
-    "qrLinks": [
-      "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
-    ]
+      "location": "Mogilev Region, Bobruisk, Gogol Street, 16",
+      "year": "2001",
+      "area": "0.062 ha",
+      "status": "Botanical Natural Monument of local significance",
+      "manager": "Bobruisk City and District Inspectorate of Natural Resources and Environmental Protection"
+    }
   },
   {
     "id": "lukovaya-gora",
@@ -54,27 +65,36 @@
     "videoUrl": "https://www.youtube.com/watch?v=HPYyQz29i0s",
     "sources": [
       {
-        "title": "Golubeva, T. “Lukovaya Gora” // Babrujskaje zhyccjo. — 2009. — 1 July. — p. 10."
+        "title": "Официальный геопортал и картографический реестр ООПТ Республики Беларусь — Паспорт ландшафтного объекта «Луковая гора» (minpriroda.gov.by).",
+        "url": "https://minpriroda.gov.by"
       },
       {
-        "title": "Tourist Map of Mogilev Region — Lukovaya Gora",
-        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+        "title": "Информационная статья «Луковая гора» — Энциклопедия Бобруйска (wiki.bobr.by).",
+        "url": "https://bobr.by"
       },
       {
-        "title": "Bobruisk Wiki — Lukovaya Gora",
-        "url": "https://wiki.bobr.by/Луковая_гора"
+        "title": "Раздел «Природа Бобруйского района» — Экологическая карта Могилевской областной библиотеки (libmogilev.by).",
+        "url": "https://libmogilev.by"
+      },
+      {
+        "title": "Туристическо-географический вестник «Про Беларусь» — Профиль ландшафтного заказника местного значения «Луковая гора» (probelarus.by).",
+        "url": "https://probelarus.by"
+      },
+      {
+        "title": "Экологический отчет ГУО «Средняя школа №6 г. Бобруйска» по исследованию родников Луковой горы."
+      },
+      {
+        "title": "Историко-краеведческий очерк «Четыре века назад: Бобруйск в XVII столетии» на городском портале Бобруйск Life (bobrlife.by).",
+        "url": "https://bobrlife.by"
       }
     ],
     "details": {
-      "area": "30,5 га",
+      "location": "Mogilev Region, northern outskirts of Bobruisk, along the right bank of the Berezina",
       "year": "1994",
-      "status": "Landscape Reserve of local significance"
-    },
-    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
-    "qrLinks": [
-      "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
-      "https://wiki.bobr.by/Луковая_гора"
-    ]
+      "area": "30.5 ha",
+      "status": "Landscape Reserve of local significance",
+      "manager": "Bobruisk City and District Inspectorate of Natural Resources and Environmental Protection"
+    }
   },
   {
     "id": "dubovski-kaskad",
@@ -95,26 +115,37 @@
     "videoUrl": "https://www.youtube.com/watch?v=GvgooxmePsU",
     "sources": [
       {
-        "title": "Verbítsky, E. “There is something to amaze” // Belarusian Forest Newspaper. — 2014. — 24 April. — p. 7."
+        "title": "Официальная интерактивная карта и реестр ООПТ — Министерство природных ресурсов и охраны окружающей среды Республики Беларусь (minpriroda.gov.by) — Паспорт объекта «Дубовский каскад озер».",
+        "url": "https://minpriroda.gov.by"
       },
       {
-        "title": "Tourist Map of Mogilev Region — natural sites of Bobruisk District",
-        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+        "title": "Официальный реестр природных памятников и заказников Бобруйщины — Бобруйский районный исполнительный комитет (bobruisk-rik.gov.by).",
+        "url": "https://bobruisk-rik.gov.by"
       },
       {
-        "title": "Bobruisk District Executive Committee — Dubovski Cascade of Lakes",
-        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/497-priroda"
+        "title": "Описание экологического маршрута по Бобруйскому району — Портал Бобруйского райисполкома."
+      },
+      {
+        "title": "Географические и биологические профили природных объектов Могилевщины — Информационный туристический каталог «Про Беларусь» (probelarus.by).",
+        "url": "https://probelarus.by"
+      },
+      {
+        "title": "Краеведческая картотека и база данных ООПТ Бобруйского района на академическом портале Studbooks.net.",
+        "url": "https://studbooks.net"
+      },
+      {
+        "title": "Фото-архив и иллюстрированные хроники экспедиций БЕЛТА (belta.by).",
+        "url": "https://belta.by"
       }
     ],
     "details": {
-      "area": "191 га",
-      "year": "1994",
-      "status": "Landscape Reserve of local significance"
+      "location": "Mogilev Region, Bobruisk District, lands of Telushsky and Bortnikovsky Village Councils",
+      "year": "2007",
+      "area": "1028.26 ha",
+      "status": "Landscape Reserve of local significance",
+      "manager": "Bobruisk City and District Inspectorate of Natural Resources and Environmental Protection"
     },
-    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
-    "qrLinks": [
-      "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
-    ]
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "vekovaya-sosna",
@@ -135,22 +166,34 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Gladkova, E. “The ancient pine received protected status” // Trybuna Pratsy (Bobruisk). — 2015. — 4 February."
+        "title": "Государственный реестр ООПТ Республики Беларусь — Паспорт памятника природы «Вековая сосна» (minpriroda.gov.by).",
+        "url": "https://minpriroda.gov.by"
       },
       {
-        "title": "Tourist Map of Mogilev Region — Century Pine",
-        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
+        "title": "Официальный реестр памятников природы Бобруйщины — Бобруйский районный исполнительный комитет (bobruisk-rik.gov.by).",
+        "url": "https://bobruisk-rik.gov.by"
+      },
+      {
+        "title": "Экологический вестник и сводки новостей Бобруйского лесного фонда на региональном портале Bobr.by.",
+        "url": "https://bobr.by"
+      },
+      {
+        "title": "Отчет о полевых выездах и фотофиксации объекта — Белорусский туристический портал Strada.by (Путешествия по Беларуси).",
+        "url": "https://strada.by"
+      },
+      {
+        "title": "Материалы лесоустройства и хроника восстановления охранных знаков — Городская газета «Коммерческий курьер» (komkur.info).",
+        "url": "https://komkur.info"
       }
     ],
     "details": {
-      "area": "1,5 га",
+      "location": "Mogilev Region, Bobruisk District, Slobodkovsky Village Council; near the ring road between Brozhka and Vishnyovka",
       "year": "2014",
-      "status": "Botanical Natural Monument of local significance"
+      "area": "0.009 ha",
+      "status": "Botanical Natural Monument of local significance",
+      "manager": "Bobruisk City and District Inspectorate of Natural Resources and Environmental Protection"
     },
-    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop",
-    "qrLinks": [
-      "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
-    ]
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "poymennaya-dubrava",
@@ -171,21 +214,30 @@
     "videoUrl": "https://www.youtube.com/watch?v=3_5wmaBh_Mc&t=387s",
     "sources": [
       {
-        "title": "“Floodplain Oak Forest” // Specially Protected Natural Areas of Mogilev Region / ed. by D. G. Grummo et al. — Mogilev, 1999. — p. 100."
+        "title": "Официальный кадастровый паспорт ООПТ «Пойменная дубрава» — Реестр Министерства природных ресурсов и охраны окружающей среды Республики Беларусь (minpriroda.gov.by).",
+        "url": "https://minpriroda.gov.by"
       },
       {
-        "title": "Bobruisk District Executive Committee — nature section",
-        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
+        "title": "Раздел «Памятники природы Бобруйского района» на официальном сайте Бобруйского районного исполнительного комитета (bobruisk-rik.gov.by).",
+        "url": "https://bobruisk-rik.gov.by"
+      },
+      {
+        "title": "Научно-исследовательская база данных инвентаризации вековых деревьев «Живые памятники природы Республики Беларусь» (livemonuments.by).",
+        "url": "https://livemonuments.by"
+      },
+      {
+        "title": "Сводная экологическая карта «Природа и ООПТ Бобруйщины» на портале Могилевской областной библиотеки (libmogilev.by).",
+        "url": "https://libmogilev.by"
       }
     ],
     "details": {
-      "area": "629 га",
-      "status": "Botanical Natural Monument of local significance"
+      "location": "Mogilev Region, Bobruisk District, 10 km south of Bobruisk, near Domanovo village",
+      "year": "2003",
+      "area": "629 ha",
+      "status": "Botanical Natural Monument of local significance",
+      "manager": "Domanovo Forestry, Bobruisk Forestry Enterprise"
     },
-    "qrUrl": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda",
-    "qrLinks": [
-      "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
-    ]
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "brody",
@@ -205,16 +257,22 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Официальный реестр ООПТ на сайте Министерства природных ресурсов и охраны окружающей среды Республики Беларусь.",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Географические базы данных и кадастровые карты распределения заповедных зон Яндекс Карт (Чаусский район)."
       }
     ],
     "details": {
-      "area": "",
-      "year": "1998",
-      "status": "Hydrological Reserve of local significance"
+      "location": "Mogilev Region, Chausy District, Antonovsky Village Council, “Brody” drainage system",
+      "year": "2006",
+      "area": "55 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Bobruisk City and District Inspectorate of Natural Resources and Environmental Protection"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "velikie-brody",
@@ -234,16 +292,27 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Материалы экологической базы данных и схемы природно-охраняемых территорий Бобруйского района на портале Studbooks.net.",
+        "url": "https://studbooks.net"
+      },
+      {
+        "title": "Официальный документ Министерства природных ресурсов и охраны окружающей среды РБ (ОВОС Бобруйского райисполкома).",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Историко-географические реестры ООПТ (Особо охраняемых природных территорий) Бобруйского района на краеведческих форумах (fgb.by / Глобус Беларуси).",
+        "url": "https://fgb.by"
       }
     ],
     "details": {
-      "area": "",
+      "location": "Mogilev Region, Bobruisk District, near Brozhzha settlement; Domanovo Forestry lands",
       "year": "1998",
-      "status": "Hydrological Reserve of local significance"
+      "area": "52 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Domanovo Forestry, Bobruisk Forestry Enterprise"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "velikoe",
@@ -263,16 +332,29 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Официальный геопортал Министерства природных ресурсов и охраны окружающей среды РБ — кадастровые сведения, точные географические координаты, площадь (158,94 га) и подробный список редких охраняемых лесных биотопов заказника «Великое».",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Лесоустроительный проект ГЛХУ «Бобруйский лесхоз» — даты и номера официальных решений Бобруйского РИК (от 2007 и 2021 гг.) о создании и переутверждении границ природоохранного объекта."
+      },
+      {
+        "title": "Экологический вестник портала Bobr.by — территориальная привязка (2 км к северо-западу от д. Макаровичи), распределение земель лесного фонда и детальный перечень юридических ограничений на территории ООПТ.",
+        "url": "https://bobr.by"
+      },
+      {
+        "title": "Региональная схема размещения ООПТ Могилевской области — государственные плановые таблицы Могилевского областного комитета природных ресурсов с подтверждением актуального статуса объекта до 2033 года."
       }
     ],
     "details": {
-      "area": "",
-      "year": "1995",
-      "status": "Hydrological Reserve of local significance"
+      "location": "Mogilev Region, Bobruisk District, Brozha Village Council, about 2 km northwest of Makarovichi village",
+      "year": "2007",
+      "area": "158.94 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Bobruisk Forestry Enterprise"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "goreloye",
@@ -291,16 +373,25 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Учебно-научные материалы «Система природно-охраняемых территорий Бобруйского района» — подробная академическая справка о годе создания (1998 г.), площади (72 га), принадлежности к Бобруйскому лесхозу, а также полный законодательный перечень запретов на хозяйственную деятельность в заказнике «Горелое»."
+      },
+      {
+        "title": "Экологические реестры ООПТ Бобруйского района на портале «Глобус Беларуси» — хронологическая база данных и территориальные списки малых гидрологических заказников Могилевской области с географической привязкой к поселку Брожа.",
+        "url": "https://fgb.by"
+      },
+      {
+        "title": "Официальный сайт ГЛХУ «Бобруйский лесхоз» — картографические и лесоустроительные сведения о структуре лесничеств (Брожское лесничество) и распределении природоохранных зон фонда."
       }
     ],
     "details": {
-      "area": "",
+      "location": "Mogilev Region, Bobruisk District, near Brozha settlement",
       "year": "1998",
-      "status": "Hydrological Reserve of local significance"
+      "area": "72 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Bobruisk Forestry Enterprise"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "lesnoy-moh",
@@ -319,16 +410,27 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Официальные документы Бобруйского районного исполнительного комитета (Раздел ОВОС) — государственные перечни охраняемых территорий Бобруйщины с указанием распределения земель по лесничествам (Приберезинское лесничество, 23 га для ядра «Лесной мох»).",
+        "url": "https://bobruisk-rik.gov.by"
+      },
+      {
+        "title": "Учебно-научные материалы «Система природно-охраняемых территорий Бобруйского района» — подробная характеристика ландшафта, года основания (1995 г.), площади (136 га) и полный перечень законодательных запретов на хозяйственную деятельность на территории заказника."
+      },
+      {
+        "title": "Экологические реестры ООПТ Бобруйского района на «Глобус Беларуси» — хронологическая база данных по датам основания и площади малых гидрологических заказников Могилевской области.",
+        "url": "https://fgb.by"
       }
     ],
     "details": {
-      "area": "",
+      "location": "Mogilev Region, Bobruisk District, lands of Priberezinsky Forestry",
       "year": "1995",
-      "status": "Hydrological Reserve of local significance"
+      "area": "136 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Priberezinsky Forestry, Bobruisk Forestry Enterprise"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate.",
+    "stockPhoto": true
   },
   {
     "id": "lipnyaki",
@@ -348,16 +450,25 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Официальный геопортал Министерства природных ресурсов и охраны окружающей среды РБ — кадастровые сведения, точная площадь (392,81 га), описание типов болот и лесоболотного комплекса заказника «Липняки».",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Официальный лесоустроительный проект ГЛХУ «Бобруйский лесхоз» — номера и даты официальных нормативных решений Бобруйского РИК от 2007 и 2021 годов, определяющие юридический статус объекта."
+      },
+      {
+        "title": "Районное издание «Трыбуна працы» / Статья об ООПТ Бобруйского района — географическая привязка к местности (расстояние до д. Коробовщина и п. Глуша) и распределение земель по государственному лесному фонду."
       }
     ],
     "details": {
-      "area": "",
-      "year": "1994",
-      "status": "Hydrological Reserve of local significance"
+      "location": "Mogilev Region, Bobruisk District, Glusha Village Council; about 3 km west of Korobovshchina village and 5 km west of Glusha settlement",
+      "year": "2007",
+      "area": "392.81 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Glusha Forestry, Bobruisk Forestry Enterprise"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "podraga",
@@ -377,16 +488,40 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Учебно-научные материалы «Система природно-охраняемых территорий Бобруйского района» — официальные данные по году основания (1997 г.), площади (57 га), принадлежности к Бобруйскому лесхозу, а также подробный перечень законодательных запретов на территории заказника «Подрага»."
+      },
+      {
+        "title": "Экологические реестры ООПТ Бобруйского района на «Глобус Беларуси» — хронологическая база данных и картографические списки малых гидрологических заказников Могилевской области.",
+        "url": "https://fgb.by"
+      },
+      {
+        "title": "Официальные документы Бобруйского районного исполнительного комитета (Раздел ОВОС) — государственные перечни охраняемых территорий Бобруйщины с указанием ответственных лесничеств (Брожское лесничество для заказника «Подрага»).",
+        "url": "https://bobruisk-rik.gov.by"
+      },
+      {
+        "title": "Официальные реестры Минприроды РБ: Объект включен в общереспубликанский список особо охраняемых природных территорий (ООПТ) Могилевской области.",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Документы Бобруйского райисполкома: Картографическое описание и точные границы закреплены в Постановлении о создании от 1997 года, а также упоминаются в экологических отчетах (например, в материалах ОВОС Бобруйского района)."
+      },
+      {
+        "title": "Лесоустроительные документы Бобруйского лесхоза: Информация находится во внутренних базах Брожского лесничества, так как кварталы заказника изъяты из интенсивного лесопользования."
+      },
+      {
+        "title": "Студенческие и научные работы: Детальный разбор ограничений и целей создания «Подраги» часто приводится в академических обзорах экологических систем Могилевщины (наподобие базы Studbooks или Электронной библиотеки БГУ).",
+        "url": "https://studbooks.net"
       }
     ],
     "details": {
-      "area": "",
+      "location": "Mogilev Region, Bobruisk District, lands of Brozha Forestry, Bobruisk Forestry Enterprise",
       "year": "1997",
-      "status": "Hydrological Reserve of local significance"
+      "area": "57 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Brozha Forestry, Bobruisk Forestry Enterprise"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "tazhilovichski-moh",
@@ -405,16 +540,32 @@
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Министерство природных ресурсов и охраны окружающей среды РБ — официальные карты-схемы, реестры особо охраняемых природных территорий (ООПТ) и перечни природных объектов местного и республиканского значения по Могилевской области.",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Национальный правовой Интернет-портал Республики Беларусь — тексты официальных решений Бобруйского районного исполнительного комитета о создании заказника, утверждении его границ и установлении охранного режима (запреты на мелиорацию, рубки, застройку и т.д.).",
+        "url": "https://bobruisk-rik.gov.by"
+      },
+      {
+        "title": "Портал Могилевского областного исполнительного комитета — справочные данные о землепользователях (СПК «Колхоз им. Невского») и распределении природных фондов Бобруйского района.",
+        "url": "https://mogilev-region.gov.by"
+      },
+      {
+        "title": "Региональные туристические справочники и эко-порталы (ProBelarus, Wildlife.by) — материалы о туристических маршрутах района, описания структуры верховых и переходных болотных массивов, а также правила посещения диких заповедных зон.",
+        "url": "https://wildlife.by"
       }
     ],
     "details": {
-      "area": "",
+      "location": "Mogilev Region, Bobruisk District, lands of Nevsky Collective Farm Agricultural Cooperative",
       "year": "2010",
-      "status": "Hydrological Reserve of local significance"
+      "area": "240 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Nevsky Collective Farm Agricultural Cooperative"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate.",
+    "stockPhoto": true
   },
   {
     "id": "terehovka",
@@ -428,21 +579,32 @@
     "images": [
       "images/velikoe.jpg"
     ],
-    "shortDesc": "Тереховка: 129 ha, 2000 year. ГЛХУ «Бобруйский лесхоз».",
-    "fullDesc": "📍 LOCATION AND STATUS:\nHydrological Reserve of local significance «Тереховка».\n\n📌 FACTS FROM THE PRESENTATION:\nProtected status assigned в 2000 году. Место нахождения — Бобруйский район, ГЛХУ «Бобруйский лесхоз». Area — 129 га. Natural value — уникальный по природной ценности объект для данной местности.",
+    "shortDesc": "A 129-hectare local hydrological reserve established in 2000 to preserve the wetland and water regime of the eastern part of Bobruisk District.",
+    "fullDesc": "Overview\n“Terехovka” is a local hydrological protected area in Bobruisk District, Mogilev Region. It is named after the nearby village of Terekhovka and is associated with the Ola River area.\n\nStatus and history\nThe protected status was officially established in 2000. Its purpose is to preserve the natural hydrological regime of small water bodies and wetland ecosystems.\n\nLocation and territory\nThe reserve lies in the eastern part of Bobruisk District. Its territory is connected with the state forest fund of Bobruisk Forestry Enterprise and partly with agricultural land. Area: 129 ha.\n\nNatural features\nThe complex includes lowland and transitional bogs, a wet floodplain and a network of small channels. Wet black-alder and birch stands dominate the forests, while pine stands occur on higher ground. The supplied material mentions beaver, otter and mink populations and seasonal nesting of water-associated birds.\n\nProtection\nA special conservation regime applies. Drainage works, peat extraction, major logging, vegetation burning, heavy vehicle movement off public roads and unauthorized camps are restricted.",
     "videoUrl": "",
     "sources": [
       {
-        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+        "title": "Сводная таблица «Особо охраняемые природные территории (ООПТ) Могилевской области: Бобруйский район» — Глобус Беларуси (fgb.by).",
+        "url": "https://fgb.by"
+      },
+      {
+        "title": "Краеведческие и географические базы данных инвентаризации водно-болотных угодий Бобруйского района — Studbooks.net.",
+        "url": "https://studbooks.net"
+      },
+      {
+        "title": "Районные экологические отчеты Бобруйской городской и районной инспекции природных ресурсов и охраны окружающей среды.",
+        "url": "https://bobruisk-rik.gov.by"
       }
     ],
     "details": {
-      "area": "",
+      "location": "Mogilev Region, Bobruisk District, eastern part of the district, near Terekhovka village and the Ola River",
       "year": "2000",
-      "status": "Hydrological Reserve of local significance"
+      "area": "129 ha",
+      "status": "Hydrological Reserve of local significance",
+      "manager": "Bobruisk City and District Inspectorate of Natural Resources and Environmental Protection"
     },
     "coordsAccuracy": "approximate",
-    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+    "coordsNote": "The map position is approximate."
   },
   {
     "id": "dubrava",
@@ -460,12 +622,27 @@
     "shortDesc": "A botanical natural monument of local significance in the Priberezinsky forestry area, about 2 km east of Bobruisk.",
     "fullDesc": "The protected site is a bracken oak forest estimated to be about 110–160 years old. The indicated location is the Priberezinsky forestry area in the southern part of Bobruisk.",
     "details": {
-      "status": "Botanical natural monument of local significance"
+      "location": "Mogilev Region, Bobruisk District, lands of Bobruisk Forestry, Bobruisk Forestry Enterprise",
+      "year": "2003",
+      "area": "29.6 ha",
+      "status": "Botanical Natural Monument of local significance",
+      "manager": "Bobruisk Forestry, Bobruisk Forestry Enterprise"
     },
     "sources": [
       {
-        "title": "ООПТ: Бобруйский район — сведения о ботаническом памятнике природы «Дубрава»",
-        "url": "https://fgb.by/viewtopic.php?t=6356"
+        "title": "Официальный геопортал Министерства природных ресурсов и охраны окружающей среды Республики Беларусь",
+        "url": "https://minpriroda.gov.by"
+      },
+      {
+        "title": "Лесоустроительный проект ГЛХУ «Бобруйский лесхоз»"
+      },
+      {
+        "title": "Официальный сайт Бобруйского районного исполнительного комитета",
+        "url": "https://bobruisk-rik.gov.by"
+      },
+      {
+        "title": "Материалы регионального издания «Коммерческий курьер» (Бобруйск)",
+        "url": "https://komkur.info"
       }
     ]
   }

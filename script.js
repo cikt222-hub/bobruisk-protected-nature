@@ -1,5 +1,5 @@
 /* v16 — stable application controller. */
-window.BOBRUISK_APP_VERSION = "22";
+window.BOBRUISK_APP_VERSION = "26";
 // Set this once to the email address that should receive error reports.
 // FormSubmit sends the form directly from the static site; no backend is required.
 const REPORT_EMAIL = window.BOBRUISK_REPORT_EMAIL || "YOUR_EMAIL@example.com";
@@ -19,6 +19,7 @@ let detailOrigin = null;
 let mapImageIndex = 0;
 let detailImageIndex = 0;
 let catalogScrollTop = 0;
+let catalogVisited = false;
 let mapStateBeforeDetail = null;
 
 const categoryIcons = {
@@ -71,10 +72,13 @@ function youtubeEmbed(value='') {
   return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1${start}`;
 }
 function formatDescription(text='') {
-  return String(text).split(/\n/).map(line=>{
-    const t=line.trim(); if(!t) return '<div class="desc-gap"></div>';
-    const heading=/^(?:📍|📌|🌿|🌳|💧|🏞|🌍|🔬|🛡️|[А-ЯЁA-Z][А-ЯЁA-Z\s«»—–-]{2,}:)/u.test(t);
-    return heading ? `<h3 class="desc-heading">${escapeHtml(t)}</h3>` : `<p>${escapeHtml(t)}</p>`;
+  const lines=String(text).split(/\n/).map(x=>x.trim()).filter(Boolean);
+  const headingRe=/^(?:общая характеристика|юридический статус.*|статус и история.*|географическое положение.*|расположение и территория|местоположение.*|природные особенности.*|биоразнообразие.*|растительный мир.*|животный мир.*|гидрография.*|геологическая.*|биометрические.*|современное.*состояние.*|режим охраны.*|охрана.*|действующий природоохранный режим.*|природный ландшафт.*|экологическое значение.*|туристический потенциал.*|площадь.*|исторический контекст.*)$/i;
+  return lines.map(line=>{
+    if(headingRe.test(line) || (/^[^.!?]{3,90}:$/.test(line) && !/^https?:/i.test(line))) return `<h3 class="desc-heading">${escapeHtml(line.replace(/:$/,''))}</h3>`;
+    const m=line.match(/^([^:]{2,90}):\s+(.+)$/);
+    if(m && !/^https?:/i.test(line)) return `<p class="desc-labeled"><strong>${escapeHtml(m[1])}:</strong> ${escapeHtml(m[2])}</p>`;
+    return `<p>${escapeHtml(line)}</p>`;
   }).join('');
 }
 
@@ -135,9 +139,7 @@ function normalizeData(data){
     coords:Array.isArray(o?.coords) && o.coords.length===2
       ? [Number(o.coords[0]),Number(o.coords[1])] : null,
     images:Array.isArray(o?.images)?o.images.filter(Boolean):[],
-    sources:Array.isArray(o?.sources)
-      ? o.sources.filter(src => !/презентац/i.test(String(src?.title||src?.name||'')))
-      : [],
+    sources:Array.isArray(o?.sources)?o.sources:[],
     details:o?.details && typeof o.details==='object'?o.details:{}
   }));
 }
@@ -156,11 +158,11 @@ function applyTranslations() {
   setText('catalog-kicker',translations.catalog_kicker||'АТЛАС ПРИРОДНЫХ МЕСТ'); setText('catalog-title',translations.object_list_title||'Природные объекты'); setText('catalog-subtitle',translations.catalog_subtitle||'Исследуйте охраняемые территории и природные комплексы Бобруйщины.');
   setPlaceholder('catalog-search-input',translations.search_placeholder||'Поиск объекта...'); setText('catalog-count-label',translations.catalog_count_label||'объектов в атласе'); setText('catalog-map-label',translations.catalog_map||'Открыть карту');
   setText('map-title-text',translations.map_title||'Интерактивная карта'); setPlaceholder('search-input',translations.search_placeholder||'Поиск объекта...'); setText('filter-title',translations.filter_title||'Категории'); setText('filter-all',translations.filter_all||'Все'); setText('filter-landscape',translations.filter_landscape||'Ландшафтные'); setText('filter-botanical',translations.filter_botanical||'Ботанические'); setText('filter-hydrological',translations.filter_hydrological||'Гидрологические'); setText('map-style-title',translations.map_style_title||'Вид карты'); setText('map-style-hybrid',translations.map_style_hybrid||'Спутник + Гибрид'); setText('map-style-osm',translations.map_style_osm||'Схема (OSM)'); setText('object-list-title',translations.object_list_title||'Природные объекты'); setText('fit-all-label',translations.fit_all||'Все объекты'); setText('legend-botanical',translations.legend_botanical||'Ботанические'); setText('legend-landscape',translations.legend_landscape||'Ландшафтные'); setText('legend-hydrological',translations.legend_hydrological||'Гидрологические'); setText('mobile-object-panel-label',translations.mobile_objects||'Объекты');
-  setText('expand-sidebar-label',translations.more_info||'Подробнее'); setText('object-detail-back-label',translations.back||'Назад'); setText('object-detail-description-title',translations.full_description||'Подробное описание'); setText('object-detail-sources-title',translations.sources_title||'Источники'); setText('object-detail-qr-label',translations.qr_links||'Ссылка'); setText('object-detail-video-title',translations.video_title||'Видеоэкскурсия'); setText('object-detail-gallery-title',translations.gallery_title||'Фотогалерея'); setText('youtube-open-text',translations.watch_on_youtube||'Открыть видео на YouTube'); setText('object-detail-no-video',translations.no_video||'Видео для этого объекта пока не добавлено');
+  setText('expand-sidebar-label',translations.more_info||'Подробнее'); setText('object-detail-back-label',translations.back||'Назад'); setText('object-detail-description-title',translations.full_description||'Подробное описание'); setText('detail-stock-photo',translations.stock_photo||'Стоковое фото'); setText('object-detail-stock-photo',translations.stock_photo||'Стоковое фото'); setText('source-modal-kicker',translations.source_modal_kicker||'ИСТОЧНИК'); setText('source-modal-title',translations.source_modal_title||'Источник информации'); setText('source-modal-copy',translations.source_modal_copy||'Откройте источник на компьютере или отсканируйте QR-код телефоном.'); setText('source-modal-open',translations.source_modal_open||'Перейти на сайт'); setText('source-modal-no-url',translations.source_modal_no_url||'Для этого источника ссылка не указана.'); setText('object-detail-sources-title',translations.sources_title||'Источники'); setText('object-detail-qr-label',translations.qr_links||'Ссылка'); setText('object-detail-video-title',translations.video_title||'Видеоэкскурсия'); setText('object-detail-gallery-title',translations.gallery_title||'Фотогалерея'); setText('youtube-open-text',translations.watch_on_youtube||'Открыть видео на YouTube'); setText('object-detail-no-video',translations.no_video||'Видео для этого объекта пока не добавлено');
   setText('about-kicker',translations.about_kicker||'О ПРОЕКТЕ');
   setText('about-open-map',translations.open_map||'Открыть карту'); setText('about-open-objects',translations.nav_objects||'Перейти к объектам');
   setText('about-card-label',translations.about_card_label||'ИДЕЯ');
-  setText('about-feature-title1',translations.about_feature_title1||'Исследуйте'); setText('about-feature-title2',translations.about_feature_title2||'Смотрите'); setText('about-feature-title3',translations.about_feature_title3||'Узнавайте'); setText('about-title',translations.about_page_title||'Путеводитель по заповедной природе'); setText('about-text1',translations.about_page_text1||'Цифровое путешествие по природным уголкам Бобруйского края.'); setText('about-text2',translations.about_page_text2||'Проект объединяет карту, каталог, фотографии и видеоматериалы.'); setHTML('about-feature1',translations.about_page_feature1||'Исследуйте — находите объекты и переходите от каталога к карте.'); setHTML('about-feature2',translations.about_page_feature2||'Смотрите — изучайте фотографии и доступные видеоматериалы.'); setHTML('about-feature3',translations.about_page_feature3||'Узнавайте — знакомьтесь со сведениями из исходных материалов.'); setText('about-author-kicker',translations.about_author_kicker||'ОБ АВТОРЕ'); setText('about-author-name',translations.about_author_name||'Автор проекта'); setText('about-author-nick',translations.about_author_nick||'Indigo'); setText('about-author-age',translations.about_author_age||''); setHTML('about-author-description',translations.about_author_description||''); setText('about-details-kicker',translations.details_kicker||'ТЕХНОЛОГИИ'); setText('about-details-title',translations.about_details_title||'Подробнее о сайте'); setHTML('about-details-text',translations.about_details_text||'Сайт создан на HTML5, CSS3 и JavaScript.'); setText('about-footer',translations.about_page_footer||'Сохраним природное наследие Бобруйщины вместе!');
+  setText('about-feature-title1',translations.about_feature_title1||'Исследуйте'); setText('about-feature-title2',translations.about_feature_title2||'Смотрите'); setText('about-feature-title3',translations.about_feature_title3||'Узнавайте'); setText('about-title',translations.about_page_title||'Путеводитель по заповедной природе'); setText('about-text1',translations.about_page_text1||'Цифровое путешествие по природным уголкам Бобруйского края.'); setText('about-text2',translations.about_page_text2||'Проект объединяет карту, каталог, фотографии и видеоматериалы.'); setHTML('about-feature1',translations.about_page_feature1||'Исследуйте — находите объекты и переходите от каталога к карте.'); setHTML('about-feature2',translations.about_page_feature2||'Смотрите — изучайте фотографии и доступные видеоматериалы.'); setHTML('about-feature3',translations.about_page_feature3||'Узнавайте — знакомьтесь со сведениями из исходных материалов.'); setText('about-author-kicker',translations.about_author_kicker||'ОБ АВТОРЕ'); setText('about-author-role',translations.about_author_role||''); setText('about-author-supervisor-label',translations.about_author_supervisor_label||''); setText('about-author-supervisor',translations.about_author_supervisor||''); setText('about-author-name',translations.about_author_name||'Автор проекта'); setText('about-author-nick',translations.about_author_nick||'Indigo'); setText('about-author-age',translations.about_author_age||''); setHTML('about-author-description',translations.about_author_description||''); setText('about-details-kicker',translations.details_kicker||'ТЕХНОЛОГИИ'); setText('about-details-title',translations.about_details_title||'Подробнее о сайте'); setHTML('about-details-text',translations.about_details_text||'Сайт создан на HTML5, CSS3 и JavaScript.'); setText('about-footer',translations.about_page_footer||'Сохраним природное наследие Бобруйщины вместе!');
   const aiLabel=translations.ai_label||'AI'; const aiTitle=translations.ai_title||'AI — в разработке';
   const aiBtn=document.getElementById('ai-btn'); if(aiBtn){ aiBtn.querySelector('span')?.replaceChildren(document.createTextNode(aiLabel)); aiBtn.title=aiTitle; aiBtn.setAttribute('aria-label',aiTitle); }
   setText('report-error-label',translations.report_error_label||'Ошибка'); setText('report-error-kicker',translations.report_error_kicker||'ОБРАТНАЯ СВЯЗЬ'); setText('report-error-title',translations.report_error_title||'Сообщить об ошибке'); setText('report-error-intro',translations.report_error_intro||'Опишите, что работает неправильно. Страница и выбранный объект подставятся автоматически.'); setText('report-error-message-label',translations.report_error_message_label||'Что произошло?'); setPlaceholder('report-error-message',translations.report_error_message_placeholder||'Например: кнопка «Подробнее» не открывает объект...'); setText('report-error-email-label',translations.report_error_email_label||'Ваш e-mail (необязательно)'); setPlaceholder('report-error-email',translations.report_error_email_placeholder||'Чтобы можно было ответить вам'); setText('report-error-cancel-label',translations.report_error_cancel||'Отмена'); setText('report-error-submit-label',translations.report_error_submit||'Отправить отчёт');
@@ -171,12 +173,14 @@ function applyTranslations() {
   if(currentView==='object-detail') renderObjectDetail();
 }
 function renderLegendLabels(){ setText('legend-botanical',translations.legend_botanical||'Ботанические'); setText('legend-landscape',translations.legend_landscape||'Ландшафтные'); setText('legend-hydrological',translations.legend_hydrological||'Гидрологические'); }
-function updateStats(){ setText('stat-objects',String(currentData.length)); setText('stat-categories',String(new Set(currentData.map(o=>o.category).filter(Boolean)).size||3)); setText('stat-photos',String(currentData.reduce((n,o)=>n+(Array.isArray(o.images)?o.images.length:0),0))); setText('total-count',String(currentData.length)); }
+function updateStats(){ setText('stat-objects',String(currentData.length)); setText('stat-categories',String(new Set(currentData.map(o=>o.category).filter(Boolean)).size||3)); setText('stat-photos',String(currentData.reduce((n,o)=>n+(Array.isArray(o.images)?o.images.length:0),0))); }
 
 function showView(view) {
   const ids={home:'home-view',map:'explorer-view',objects:'objects-catalog-view',about:'about-view','object-detail':'object-detail-view'};
   if(!ids[view]) return;
   if(currentView==='objects' && view!=='objects') catalogScrollTop=document.getElementById('objects-catalog-view')?.scrollTop||catalogScrollTop;
+  const firstCatalogVisit=view==='objects' && !catalogVisited;
+  if(firstCatalogVisit) catalogScrollTop=0;
   currentView=view;
   Object.values(ids).forEach(id=>document.getElementById(id)?.classList.add('hidden'));
   const el=document.getElementById(ids[view]); el?.classList.remove('hidden');
@@ -185,7 +189,12 @@ function showView(view) {
   requestAnimationFrame(()=>{
     el?.classList.remove('page-enter'); void el?.offsetWidth; el?.classList.add('page-enter');
     if(view==='map'){ setTimeout(()=>{ map?.invalidateSize(); if(!currentObject) fitAllObjects(); },80); }
-    if(view==='objects'){ renderCatalog(); const sc=document.getElementById('objects-catalog-view'); requestAnimationFrame(()=>{if(sc) sc.scrollTop=catalogScrollTop;}); }
+    if(view==='objects'){
+      renderCatalog();
+      const sc=document.getElementById('objects-catalog-view');
+      requestAnimationFrame(()=>{if(sc) sc.scrollTop=catalogScrollTop;});
+      catalogVisited=true;
+    }
     if(view==='object-detail'){ const sc=document.getElementById('object-detail-view'); if(sc) sc.scrollTop=0; }
   });
 }
@@ -220,6 +229,7 @@ function renderObjects(items=visibleMapObjects()) {
     list.appendChild(li);
   });
   updateStats();
+  setText('total-count',String(items.length));
 }
 function renderMapUI(){ renderObjects(); if(currentObject) refreshSidebar(); }
 function fitAllObjects(){ const pts=currentData.filter(o=>Array.isArray(o.coords)&&o.coords.length===2&&o.coords.every(Number.isFinite)).map(o=>o.coords); if(map&&window.L&&pts.length) map.fitBounds(L.latLngBounds(pts),{padding:[75,75],maxZoom:12}); }
@@ -237,29 +247,74 @@ function selectObject(obj,fromCatalog=false,focus=true){
 function focusMapOnObject(obj){
   if(fallbackMap && obj?.coords){ focusFallbackMap(obj); return; }
   if(!map||!obj?.coords) return;
-  map.invalidateSize();
-  const target=L.latLng(obj.coords);
-  const panelWidth=window.innerWidth>800?(document.getElementById('sidebar-right')?.offsetWidth||425):0;
-  const targetPoint=map.project(target,map.getZoom());
-  const visibleCenter=window.innerWidth>800 ? L.point(window.innerWidth/2-panelWidth/2,window.innerHeight/2) : L.point(window.innerWidth/2,window.innerHeight*.38);
-  const mapPoint=L.point(window.innerWidth/2,window.innerHeight/2);
-  const offset=visibleCenter.subtract(mapPoint);
-  const destination=map.unproject(targetPoint.subtract(offset),map.getZoom());
-  map.flyTo(destination,Math.max(map.getZoom(),13),{duration:.65,easeLinearity:.2});
+  const panel=document.getElementById('sidebar-right');
+  const panelWidth=window.innerWidth>800?(panel?.offsetWidth||425):0;
+  const focus=()=>{
+    map.invalidateSize();
+    const target=L.latLng(obj.coords);
+    const size=map.getSize();
+    const desired=L.point(Math.max(0,(size.x-panelWidth)/2),size.y/2);
+    const current=map.latLngToContainerPoint(target);
+    const delta=current.subtract(desired);
+    map.panBy(delta,{animate:true,duration:.65,easeLinearity:.2});
+  };
+  if(map.getZoom()<13){
+    map.once('zoomend',focus);
+    map.setZoom(13,{animate:true});
+  } else {
+    focus();
+  }
+}
+
+function localizedArea(value){
+  const raw=String(value??'').trim();
+  if(!raw)return '';
+  const m=raw.match(/^([0-9]+(?:[.,][0-9]+)?)\s*(?:га|ha|公顷)?$/i);
+  if(!m)return raw;
+  const number=m[1];
+  if(currentLang==='en') return `${number.replace(',', '.')} ha`;
+  if(currentLang==='zh') return `${number.replace(',', '.')} 公顷`;
+  return `${number} га`;
+}
+function localizedDetailValue(key,value){
+  if(key==='area') return localizedArea(value);
+  return String(value??'');
+}
+function renderObjectFacts(containerId,obj,mode='sidebar'){
+  const container=document.getElementById(containerId); if(!container)return;
+  const d=obj?.details||{};
+  const fields=[['location',translations.location||'Расположение'],['year',translations.year||'Год образования'],['area',translations.area||'Площадь'],['status',translations.status||'Статус']];
+  container.innerHTML='';
+  fields.forEach(([key,label])=>{
+    const value=d[key]; if(value===undefined||value===null||String(value).trim()==='') return;
+    const displayValue=localizedDetailValue(key,value);
+    const el=document.createElement('div'); el.className=mode==='sidebar'?'detail-item':'detail-fact';
+    if(mode==='sidebar') el.innerHTML=`<b>${escapeHtml(label)}</b><span>${escapeHtml(displayValue)}</span>`;
+    else el.innerHTML=`<span>${escapeHtml(label)}</span><strong>${escapeHtml(displayValue)}</strong>`;
+    container.appendChild(el);
+  });
+}
+function renderManagerBlock(containerId,labelId,valueId,obj){
+  const box=document.getElementById(containerId); if(!box)return;
+  const value=String(obj?.details?.manager||'').trim();
+  setText(labelId,translations.manager||'Управляющая структура');
+  setText(valueId,value);
+  box.classList.toggle('hidden',!value);
 }
 function refreshSidebar(){
   if(!currentObject) return;
   const obj=currentObject;
   setText('detail-category',categoryName(obj)); setCategoryIcon(document.getElementById('detail-category-icon'),obj.category); setText('detail-title',obj.name||''); setText('detail-short-desc',shortDescription(obj,220));
-  const extra=document.getElementById('detail-extra'); const d=obj.details||{}; const labels={area:translations.area||'Площадь',year:translations.year||'Год',status:translations.status||'Статус'}; extra.innerHTML='';
-  ['area','year','status'].forEach(k=>{if(d[k]) extra.insertAdjacentHTML('beforeend',`<div class="detail-item"><b>${escapeHtml(labels[k])}</b><span>${escapeHtml(String(d[k]).replace(/\s+местного значения$/i,''))}</span></div>`);}); extra.style.display=extra.children.length?'grid':'none';
+  renderObjectFacts('detail-extra',obj,'sidebar');
+  document.getElementById('detail-extra').style.display=document.getElementById('detail-extra').children.length?'grid':'none';
+  renderManagerBlock('detail-manager','detail-manager-label','detail-manager-value',obj);
   updateSidebarGallery();
   document.querySelectorAll('#object-list li').forEach(li=>li.classList.toggle('active',li.dataset.id===obj.id));
 }
 function setCategoryIcon(el,category){ if(el) el.src=iconFor(category); }
 function setImage(el,src){ if(!el)return; if(src){el.src=src;el.classList.remove('empty-image');el.alt='';}else{el.removeAttribute('src');el.classList.add('empty-image');el.alt=noPhotoText();} }
-function updateSidebarGallery(){ const imgs=Array.isArray(currentObject?.images)?currentObject.images:[]; setImage(document.getElementById('detail-image'),imgs[mapImageIndex]||''); setText('gallery-counter',imgs.length?`${mapImageIndex+1} / ${imgs.length}`:noPhotoText()); document.querySelectorAll('.gallery-arrow').forEach(b=>b.style.display=imgs.length>1?'grid':'none'); }
-function switchSidebarImage(dir){ const imgs=currentObject?.images||[]; if(imgs.length<2)return; mapImageIndex=(mapImageIndex+dir+imgs.length)%imgs.length; updateSidebarGallery(); }
+function updateSidebarGallery(){ const imgs=Array.isArray(currentObject?.images)?currentObject.images:[]; setImage(document.getElementById('detail-image'),imgs[mapImageIndex]||''); setText('gallery-counter',imgs.length?`${mapImageIndex+1} / ${imgs.length}`:noPhotoText()); document.querySelectorAll('.gallery-arrow').forEach(b=>b.style.display=imgs.length>1?'grid':'none'); document.getElementById('detail-stock-photo')?.classList.toggle('hidden',!currentObject?.stockPhoto); }
+function switchSidebarImage(dir){ const imgs=currentObject?.images||[]; if(imgs.length<2)return; const el=document.getElementById('detail-image'); el?.classList.add('gallery-changing'); setTimeout(()=>{mapImageIndex=(mapImageIndex+dir+imgs.length)%imgs.length; updateSidebarGallery(); requestAnimationFrame(()=>el?.classList.remove('gallery-changing'));},180); }
 function closeSidebar(){ currentObject=null; document.getElementById('sidebar-right')?.classList.remove('active'); document.getElementById('explorer-view')?.classList.remove('has-object-panel'); renderObjects(); }
 function shortDescription(obj,max=220){ const t=String(obj?.shortDesc||'').replace(/\s+/g,' ').trim(); if(!t)return translations.no_description||''; return t.length<=max?t:t.slice(0,max).replace(/\s+\S*$/,'')+'…'; }
 
@@ -276,7 +331,7 @@ function renderCatalog(){
   items.forEach((obj,i)=>{
     const image=Array.isArray(obj.images)&&obj.images.length?obj.images[0]:''; const cat=categoryName(obj);
     const card=document.createElement('article'); card.className=`catalog-card category-${obj.category||'botanical'}`; card.dataset.id=obj.id; card.style.setProperty('--card-index',i);
-    card.innerHTML=`<div class="catalog-card-media ${image?'':'no-image'}">${image?`<img src="${escapeHtml(image)}" alt="${escapeHtml(obj.name||'')}" loading="lazy">`:`<div class="catalog-no-image"><img class="inline-icon" src="${iconFor(obj.category)}" alt=""><span>${escapeHtml(noPhotoText())}</span></div>`}<div class="catalog-card-shade"></div><span class="catalog-category"><i class="category-dot"></i>${escapeHtml(cat)}</span></div><div class="catalog-card-body"><h3>${escapeHtml(obj.name||'')}</h3><p>${escapeHtml(shortDescription(obj,145))}</p><div class="catalog-card-actions"><button class="catalog-details-btn" type="button"><span>${escapeHtml(translations.more_info||'Подробнее')}</span><img class="button-icon" src="icons/arrow-right.svg" alt=""></button><button class="catalog-map-link" type="button" title="${escapeHtml(translations.show_on_map||'Показать на карте')}" aria-label="${escapeHtml(translations.show_on_map||'Показать на карте')}"><img class="button-icon" src="icons/map-pin.svg" alt=""></button></div></div>`;
+    card.innerHTML=`<div class="catalog-card-media ${image?'':'no-image'}">${image?`<img src="${escapeHtml(image)}" alt="${escapeHtml(obj.name||'')}" loading="lazy">`:`<div class="catalog-no-image"><img class="inline-icon" src="${iconFor(obj.category)}" alt=""><span>${escapeHtml(noPhotoText())}</span></div>`}<div class="catalog-card-shade"></div><span class="catalog-category"><i class="category-dot"></i>${escapeHtml(cat)}</span>${obj.stockPhoto?`<span class="stock-photo-badge catalog-stock-photo">${escapeHtml(translations.stock_photo||'Стоковое фото')}</span>`:''}</div><div class="catalog-card-body"><h3>${escapeHtml(obj.name||'')}</h3><p>${escapeHtml(shortDescription(obj,145))}</p><div class="catalog-card-actions"><button class="catalog-details-btn" type="button"><span>${escapeHtml(translations.more_info||'Подробнее')}</span><img class="button-icon" src="icons/arrow-right.svg" alt=""></button><button class="catalog-map-link" type="button" title="${escapeHtml(translations.show_on_map||'Показать на карте')}" aria-label="${escapeHtml(translations.show_on_map||'Показать на карте')}"><img class="button-icon" src="icons/map-pin.svg" alt=""></button></div></div>`;
     card.querySelector('.catalog-details-btn').addEventListener('click',()=>openObjectDetail(obj,'objects'));
     card.querySelector('.catalog-map-link').addEventListener('click',()=>{catalogScrollTop=document.getElementById('objects-catalog-view')?.scrollTop||0; selectObject(obj,true,true);});
     grid.appendChild(card);
@@ -293,17 +348,16 @@ function openObjectDetail(obj,origin){
 function renderObjectDetail(){
   if(!currentObject)return;
   const o=currentObject; setText('object-detail-title',o.name||''); setText('object-detail-category',categoryName(o)); setCategoryIcon(document.getElementById('object-detail-category-icon'),o.category);
-  const imgs=Array.isArray(o.images)?o.images:[]; setImage(document.getElementById('object-detail-image'),imgs[detailImageIndex]||''); setText('object-detail-counter',imgs.length?`${detailImageIndex+1} / ${imgs.length}`:noPhotoText()); document.querySelectorAll('.object-detail-gallery-arrow').forEach(b=>b.style.display=imgs.length>1?'grid':'none');
-  const facts=document.getElementById('object-detail-facts'); facts.innerHTML=''; const d=o.details||{}; [['area',translations.area||'Площадь'],['year',translations.year||'Год'],['status',translations.status||'Статус']].forEach(([k,label])=>{if(d[k])facts.insertAdjacentHTML('beforeend',`<div class="detail-fact"><span>${escapeHtml(label)}</span><strong>${escapeHtml(String(d[k]).replace(/\s+местного значения$/i,''))}</strong></div>`);});
+  const imgs=Array.isArray(o.images)?o.images:[]; setImage(document.getElementById('object-detail-image'),imgs[detailImageIndex]||''); setText('object-detail-counter',imgs.length?`${detailImageIndex+1} / ${imgs.length}`:noPhotoText()); document.querySelectorAll('.object-detail-gallery-arrow').forEach(b=>b.style.display=imgs.length>1?'grid':'none'); document.getElementById('object-detail-stock-photo')?.classList.toggle('hidden',!o.stockPhoto);
+  renderObjectFacts('object-detail-facts',o,'detail'); renderManagerBlock('object-detail-manager','object-detail-manager-label','object-detail-manager-value',o);
   const iframe=document.getElementById('object-detail-video'),placeholder=document.getElementById('object-detail-video-placeholder'),yt=document.getElementById('object-detail-youtube-link'); const embed=youtubeEmbed(o.videoUrl||'');
   if(embed){iframe.src=embed;iframe.classList.remove('hidden');placeholder.classList.add('hidden');yt.href=o.videoUrl;yt.classList.remove('hidden');}else{iframe.removeAttribute('src');iframe.classList.add('hidden');placeholder.classList.remove('hidden');yt.classList.add('hidden');}
   setHTML('object-detail-full-desc',formatDescription(o.fullDesc||''));
-  const src=document.getElementById('object-detail-sources'); src.innerHTML=''; (o.sources||[]).forEach(s=>{const li=document.createElement('li');if(s.url){const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.title||s.url;li.appendChild(a);}else li.textContent=s.title||'';src.appendChild(li);}); if(!src.children.length)src.innerHTML=`<li>${escapeHtml(translations.no_sources||'Нет указанных источников')}</li>`;
-  const qrCol=document.getElementById('object-detail-qr-col'); const qrLinks=Array.isArray(o.qrLinks)&&o.qrLinks.length?o.qrLinks:(o.qrUrl?[o.qrUrl]:[]); qrCol.classList.toggle('hidden',!qrLinks.length); if(qrLinks.length){const img=document.getElementById('object-detail-qr-code');img.src=qrPath(qrLinks[0],o.id,1);img.dataset.url=qrLinks[0];const link=document.getElementById('object-detail-source-link');link.href=qrLinks[0];link.textContent=qrLinks[0]; let extra=qrCol.querySelector('.qr-extra-links'); if(!extra){extra=document.createElement('div');extra.className='qr-extra-links';qrCol.appendChild(extra);} extra.innerHTML=''; qrLinks.slice(1).forEach((url,i)=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=url;a.className='qr-extra-link';extra.appendChild(a);});} else {const extra=qrCol.querySelector('.qr-extra-links');if(extra)extra.remove();}
+  const src=document.getElementById('object-detail-sources'); src.innerHTML=''; (o.sources||[]).forEach((s,i)=>{const li=document.createElement('li'); li.className='source-list-item'; const a=document.createElement('button'); a.type='button'; a.className='source-link-btn'; a.textContent=s.title||s.url||''; if(s.url){a.dataset.sourceIndex=i;} else {a.classList.add('is-text-only');} a.addEventListener('click',()=>openSourceModal(s)); li.appendChild(a); src.appendChild(li);}); if(!src.children.length)src.innerHTML=`<li>${escapeHtml(translations.no_sources||'Нет указанных источников')}</li>`;
   setText('object-detail-origin',detailOrigin?.view==='map'?(translations.back_to_map||'Из карты'):(translations.back_to_objects||'Из объектов'));
 }
 function qrPath(url,id='',index=1){ const safe=id||String(url).replace(/[^a-z0-9]+/gi,'-'); return `images/qr/${safe}-${index}.png`; }
-function switchDetailImage(dir){ const imgs=currentObject?.images||[]; if(imgs.length<2)return; detailImageIndex=(detailImageIndex+dir+imgs.length)%imgs.length; setImage(document.getElementById('object-detail-image'),imgs[detailImageIndex]); setText('object-detail-counter',`${detailImageIndex+1} / ${imgs.length}`); }
+function switchDetailImage(dir){ const imgs=currentObject?.images||[]; if(imgs.length<2)return; const el=document.getElementById('object-detail-image'); el?.classList.add('gallery-changing'); setTimeout(()=>{detailImageIndex=(detailImageIndex+dir+imgs.length)%imgs.length; setImage(el,imgs[detailImageIndex]); setText('object-detail-counter',`${detailImageIndex+1} / ${imgs.length}`); requestAnimationFrame(()=>el?.classList.remove('gallery-changing'));},180); }
 function backFromDetail(){
   const o=detailOrigin||{view:'objects'}; const obj=currentObject; detailOrigin=null;
   if(o.view==='map'){
@@ -328,33 +382,6 @@ function closeImageViewer(){const v=document.getElementById('image-viewer');v.cl
 
 // QR viewer controls. These functions are intentionally defined before init(),
 // because init wires their click handlers during startup.
-function openQrViewer(){
-  const viewer=document.getElementById('qr-viewer');
-  const img=document.getElementById('object-detail-qr-code');
-  const target=document.getElementById('qr-viewer-img');
-  const list=document.getElementById('qr-viewer-sources');
-  if(!viewer || !img || !target || !img.src) return;
-  target.src=img.src;
-  if(list){
-    list.innerHTML='';
-    const url=img.dataset.url || currentObject?.qrUrl || '';
-    if(url){
-      const li=document.createElement('li');
-      const a=document.createElement('a');
-      a.href=url; a.target='_blank'; a.rel='noopener noreferrer';
-      a.textContent=url; li.appendChild(a); list.appendChild(li);
-    }
-  }
-  viewer.classList.remove('hidden');
-  requestAnimationFrame(()=>viewer.classList.add('is-open'));
-}
-function closeQrViewer(){
-  const v=document.getElementById('qr-viewer');
-  if(!v) return;
-  v.classList.remove('is-open');
-  setTimeout(()=>v.classList.add('hidden'),220);
-}
-
 async function changeLanguage(lang){
   const saved={view:currentView,id:currentObject?.id||null,origin:detailOrigin?{...detailOrigin}:null,mapFilter:currentFilter,catalogFilter,catalogSearch,catalogScrollTop,mapCenter:map?.getCenter()?.clone(),mapZoom:map?.getZoom()};
   await loadData(lang); await loadLocale(lang); currentFilter=saved.mapFilter;catalogFilter=saved.catalogFilter;catalogSearch=saved.catalogSearch;catalogScrollTop=saved.catalogScrollTop; currentObject=saved.id?getCurrentObjById(saved.id):null; detailOrigin=saved.origin;
@@ -420,9 +447,9 @@ let aiToastTimer=null;
 function showAiToast(){
   const toast=document.getElementById('ai-toast'); if(!toast)return;
   const text=document.getElementById('ai-toast-text'); if(text)text.textContent=translations.under_development||'В разработке';
-  toast.classList.remove('hidden'); toast.classList.remove('is-hiding');
+  toast.classList.remove('hidden'); toast.classList.remove('is-hiding'); void toast.offsetWidth; toast.classList.add('is-visible');
   clearTimeout(aiToastTimer);
-  aiToastTimer=setTimeout(()=>{toast.classList.add('is-hiding'); setTimeout(()=>toast.classList.add('hidden'),260);},1900);
+  aiToastTimer=setTimeout(()=>{toast.classList.remove('is-visible'); toast.classList.add('is-hiding'); setTimeout(()=>{toast.classList.add('hidden');toast.classList.remove('is-hiding');},320);},2800);
 }
 
 function reportPageName(){
@@ -430,18 +457,20 @@ function reportPageName(){
   return labels[currentView]||currentView;
 }
 function openReportModal(){
+  clearTimeout(reportCloseTimer);
   const modal=document.getElementById('report-error-modal'); if(!modal)return;
   const pageField=document.getElementById('report-error-page'); if(pageField)pageField.value=reportPageName();
   const obj=currentObject?.name||''; const objectField=document.getElementById('report-error-object'); if(objectField)objectField.value=obj;
   const urlField=document.getElementById('report-error-url'); if(urlField)urlField.value=location.href;
   const status=document.getElementById('report-error-status'); if(status){status.textContent='';status.className='report-error-status';}
   const message=document.getElementById('report-error-message'); if(message)message.value='';
-  modal.classList.remove('hidden'); document.body.classList.add('report-modal-open');
-  requestAnimationFrame(()=>message?.focus());
+  modal.classList.remove('hidden'); modal.classList.remove('is-closing'); document.body.classList.add('report-modal-open'); requestAnimationFrame(()=>{modal.classList.add('is-open'); message?.focus();});
 }
+let reportCloseTimer=null;
 function closeReportModal(){
   const modal=document.getElementById('report-error-modal'); if(!modal)return;
-  modal.classList.add('hidden'); document.body.classList.remove('report-modal-open');
+  clearTimeout(reportCloseTimer); modal.classList.remove('is-open'); modal.classList.add('is-closing'); document.body.classList.remove('report-modal-open');
+  reportCloseTimer=setTimeout(()=>{modal.classList.add('hidden');modal.classList.remove('is-closing');},260);
 }
 async function submitErrorReport(e){
   e.preventDefault();
@@ -478,6 +507,16 @@ async function submitErrorReport(e){
     status.className='report-error-status is-error';
   }finally{ submit.disabled=false; }
 }
+
+function openSourceModal(source){
+  const modal=document.getElementById('source-modal'); if(!modal||!source)return;
+  setText('source-modal-name',source.title||source.url||'');
+  const urlEl=document.getElementById('source-modal-url'),open=document.getElementById('source-modal-open'),qrWrap=document.getElementById('source-modal-qr-wrap'),qr=document.getElementById('source-modal-qr'),noUrl=document.getElementById('source-modal-no-url');
+  if(source.url){ urlEl.textContent=source.url; urlEl.classList.remove('hidden'); open.href=source.url; open.classList.remove('hidden'); qrWrap.classList.remove('hidden'); qr.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(source.url); noUrl.classList.add('hidden'); }
+  else { urlEl.textContent=''; urlEl.classList.add('hidden'); open.classList.add('hidden'); qrWrap.classList.add('hidden'); noUrl.classList.remove('hidden'); }
+  modal.classList.remove('hidden'); requestAnimationFrame(()=>modal.classList.add('is-open'));
+}
+function closeSourceModal(){const modal=document.getElementById('source-modal');if(!modal)return;modal.classList.remove('is-open');setTimeout(()=>modal.classList.add('hidden'),220);}
 
 function init(){
   const theme=localStorage.getItem('bobruisk-theme')||'light';
@@ -526,9 +565,7 @@ function init(){
   document.addEventListener('click',e=>{if(!e.target.closest('.lang-switcher'))document.getElementById('lang-dropdown')?.classList.add('hidden');});
   document.getElementById('close-image-viewer')?.addEventListener('click',closeImageViewer);
   document.getElementById('image-viewer')?.addEventListener('click',e=>{if(e.target===e.currentTarget)closeImageViewer();});
-  document.getElementById('object-detail-qr-expand')?.addEventListener('click',()=>openQrViewer());
-  document.getElementById('close-qr-viewer')?.addEventListener('click',closeQrViewer);
-  document.getElementById('qr-viewer')?.addEventListener('click',e=>{if(e.target===e.currentTarget)closeQrViewer();});
+document.getElementById('source-modal-close')?.addEventListener('click',closeSourceModal); document.getElementById('source-modal')?.addEventListener('click',e=>{if(e.target===e.currentTarget)closeSourceModal();});
   document.getElementById('report-error-btn')?.addEventListener('click',openReportModal); document.getElementById('report-error-close')?.addEventListener('click',closeReportModal); document.getElementById('report-error-cancel')?.addEventListener('click',closeReportModal); document.getElementById('report-error-form')?.addEventListener('submit',submitErrorReport); document.getElementById('report-error-modal')?.addEventListener('click',e=>{if(e.target===e.currentTarget)closeReportModal();});
   initCatalogSearch();initMapSearch();initGalleryViewer();initHeroSlideshow();
 
@@ -562,8 +599,7 @@ function init(){
       map.setView([53.1384,29.2223],11);
       L.control.zoom({position:'bottomleft'}).addTo(map);
 
-      // OSM is the reliable default; the hybrid layer remains available from
-      // the selector. A failed tile source must never prevent markers from
+      // The selector's initial value is authoritative; hybrid is the default. A failed tile source must never prevent markers from
       // rendering.
       const initialStyle=document.getElementById('map-layer-select')?.value||'hybrid';
       baseLayer=(tileLayers[initialStyle]||tileLayers.hybrid)();
@@ -596,7 +632,7 @@ function init(){
     if(e.key==='Escape'){
       if(!document.getElementById('report-error-modal')?.classList.contains('hidden'))closeReportModal();
       else if(!document.getElementById('image-viewer')?.classList.contains('hidden'))closeImageViewer();
-      else if(!document.getElementById('qr-viewer')?.classList.contains('hidden'))closeQrViewer();
+      else if(!document.getElementById('source-modal')?.classList.contains('hidden'))closeSourceModal();
       else if(currentView==='object-detail')backFromDetail();
       else if(currentView==='map')closeSidebar();
     }
